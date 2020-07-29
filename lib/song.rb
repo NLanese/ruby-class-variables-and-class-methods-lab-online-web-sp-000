@@ -3,8 +3,8 @@ class Song
   @@genres = []
   @@artists = []
   @@count = 0
-  :@@artist_count => {}
-  :@@genre_count => {}
+  @@artist_count: {}
+  @@genre_count: {}
   attr_writer :name
   attr_reader :name
 
