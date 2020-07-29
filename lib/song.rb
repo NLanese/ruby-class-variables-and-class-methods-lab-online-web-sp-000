@@ -74,9 +74,9 @@ class Song
       if !(@@genre_count.include?(gen))
         @@genre_count[gen] = 1
       else
-        thisGenreString = gen.to_s 
+        thisGenreString = gen.to_s
         @@genre_count.each do | genreInCount , value |
-          genreInCountString = genreInCount.to_s 
+          genreInCountString = genreInCount.to_s
           if (genreInCountString == thisGenreString)
             @@genre_count[genreInCount][value] += 1
       end
