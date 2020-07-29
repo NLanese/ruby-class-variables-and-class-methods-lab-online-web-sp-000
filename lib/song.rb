@@ -71,7 +71,13 @@ class Song
 
   def self.genre_count
     @@genres.each do | gen |
-      if !(@@genre_count.include?(gen))
+      hasAlready = false
+      @@genre_count.each do | genreInCount , value |
+        if (gen == genreInCount)
+          hasAlready = true
+        end
+      end
+      if !(hasAlready)
         @@genre_count[gen] = 1
       else
         thisGenreString = gen.to_s
