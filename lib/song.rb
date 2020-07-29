@@ -46,9 +46,9 @@ class Song
         end
       end
       if !(hasAlready)
-        @@artist_count[gen] = 1
+        @@artist_count[art] = 1
       else
-        @@artist_count[gen] += 1
+        @@artist_count[art] += 1
       end
     end
     return @@artist_count
