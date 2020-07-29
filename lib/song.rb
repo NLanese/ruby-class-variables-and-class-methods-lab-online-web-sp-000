@@ -29,16 +29,22 @@ class Song
     @@artists.each do | artist |
       if !(rArray.include?(artist))
         rArray << artist
-        :@@artist_count[artist] = 1
+        @@artist_count[artist] = 1
       else
-        :@@artist_count[artist] += 1
+        @@artist_count[artist] += 1
       end
     end
     return rArray
   end
 
   def artist_count
-    @@artist_count
+    @@artists.each do | artist |
+      if !(@@artist_count.include?(artist))
+        @@artist_count[artist] = 1
+      else
+        @@artist_count[artist] += 1
+      end
+    end
   end
 
   def genre=(input)
@@ -65,7 +71,7 @@ class Song
 
   def genre_count
     @@genres.each do | gen |
-      if !(rArray.include?(gen))
+      if !(@@genre_count.include?(gen))
         @@genre_count[gen] = 1
       else
         @@genre_count[gen] += 1
