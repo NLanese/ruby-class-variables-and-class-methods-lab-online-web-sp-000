@@ -24,7 +24,7 @@ class Song
     @artist
   end
 
-  def artists
+  def self.artists
     rArray = []
     @@artists.each do | artist |
       if !(rArray.include?(artist))
@@ -37,7 +37,7 @@ class Song
     return rArray
   end
 
-  def artist_count
+  def self.artist_count
     @@artists.each do | artist |
       if !(@@artist_count.include?(artist))
         @@artist_count[artist] = 1
@@ -56,7 +56,7 @@ class Song
     @genre
   end
 
-  def genres
+  def self.genres
     rArray = []
     @@genres.each do | gen |
       if !(rArray.include?(gen))
@@ -69,7 +69,7 @@ class Song
     return rArray
   end
 
-  def genre_count
+  def self.genre_count
     @@genres.each do | gen |
       if !(@@genre_count.include?(gen))
         @@genre_count[gen] = 1
@@ -87,7 +87,7 @@ class Song
     @name
   end
 
-  def count
+  def self.count
     return @@count
   end
 
