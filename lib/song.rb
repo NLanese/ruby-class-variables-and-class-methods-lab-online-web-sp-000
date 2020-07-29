@@ -79,6 +79,8 @@ class Song
           genreInCountString = genreInCount.to_s
           if (genreInCountString == thisGenreString)
             @@genre_count[genreInCount][value] += 1
+          end
+        end
       end
     end
   end
