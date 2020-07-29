@@ -64,7 +64,13 @@ class Song
   end
 
   def genre_count
-    @@genre_count
+    @@genres.each do | gen |
+      if !(rArray.include?(gen))
+        @@genre_count[gen] = 1
+      else
+        @@genre_count[gen] += 1
+      end
+    end
   end
 
   def name=(input)
