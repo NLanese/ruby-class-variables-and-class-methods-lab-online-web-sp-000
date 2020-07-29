@@ -38,13 +38,20 @@ class Song
   end
 
   def self.artist_count
-    @@artists.each do | artist |
-      if !(@@artist_count.include?(artist))
-        @@artist_count[artist] = 1
+    @@artists.each do | art |
+      hasAlready = false
+      @@artist_count.each do | artistInCount , value |
+        if (art == artistInCount)
+          hasAlready = true
+        end
+      end
+      if !(hasAlready)
+        @@artist_count[gen] = 1
       else
-        @@artist_count[artist] += 1
+        @@artist_count[gen] += 1
       end
     end
+    return @@artist_count
   end
 
   def genre=(input)
