@@ -3,8 +3,8 @@ class Song
   @@genres = []
   @@artists = []
   @@count = 0
-  @@artist_count: {}
-  @@genre_count: {}
+  @@artist_count = {}
+  @@genre_count = {}
   attr_writer :name
   attr_reader :name
 
@@ -61,9 +61,9 @@ class Song
     @@genres.each do | gen |
       if !(rArray.include?(gen))
         rArray << gen
-        :@@genre_count[gen] = 1
+        @@genre_count[gen] = 1
       else
-        :@@genre_count[gen] += 1
+        @@genre_count[gen] += 1
       end
     end
     return rArray
